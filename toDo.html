@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Week Planner</title>
+  <!-- jQuery UI CSS -->
+  <link href="js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet">
+  <style>
+    .row {
+      width: 14.2%;
+      float: left;
+      background-color: gray;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-right: 1px;
+      display: block;
+    }
+
+    .day {
+      padding: 20px;
+    }
+
+    .input {
+      width: 14.2%;
+      float: left;
+      background-color: gray;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-right: 1px;
+      display: none;
+    }
+
+    button {
+      width: 100px
+    }
+
+    #content {
+      clear: both;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      clear: both;
+      background: #d2ddef;
+      list-style: none;
+      width: 95%;
+      height: auto;
+      min-height: 400px;
+      margin: 0 auto;
+    }
+
+    ul li {
+      background: #bdcfed;
+      width: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    ul li:hover {
+      background: #6297ef;
+      border-color: #e3eef4;
+      cursor: pointer;
+    }
+
+    ul li:active {
+      transform: rotate(2deg);
+      background: #23a4ea;
+      border-color: #dee9ef;
+      box-shadow: 0 10px -4px #b3b9bc;
+    }
+
+    .yellowBox {
+      background: #ffc551;
+      border-color: black;
+      padding: 20px;
+      border: 2px dotted black;
+    }
+
+    body {
+      text-align: center;
+      background:url('bg.jpg');
+      background-repeat: no-repeat;
+      background-size:cover;
+    }
+
+    #deleteBox {
+      width: 300px;
+      height: 200px;
+      line-height: 200px;
+      background-color: orange;
+      position: fixed;
+      left: 84vw;
+      top: 75vh;
+    }
+
+    #helpBox {
+      width: 300px;
+      height: 200px;
+      background-color: #f4b042;
+      position: fixed;
+      left: .5vw;
+      top: 75vh;
+    }
+    h1{color:#a86110;
+      font-size:46px;
+      text-shadow: 1px 1px 2px black, 0 0 25px #edd7c7, 0 0 5px #db915c;}
+  </style>
+</head>
+
+<body>
+
+  <h1>Week Planner</h1>
+
+  <div id="weekDays">
+    <div class="row">
+      <div class="day">Sunday</div>
+      <div class="input"><input type="text" placeholder="type event time" class="timestamp"><input type="text" placeholder="type a to-do item" class="note"><button type="button" class="add">Add To-Do</button></div>
+      <ul></ul>
+    </div>
+    <div class="row">
+      <div class="day">Monday</div>
+      <div class="input"><input type="text" placeholder="type event time" class="timestamp"><input type="text" placeholder="type a to-do item" class="note"><button type="button" class="add">Add To-Do</button></div>
+      <ul></ul>
+    </div>
+    <div class="row">
+      <div class="day">Tuesday</div>
+      <div class="input"><input type="text" placeholder="type event time" class="timestamp"><input type="text" placeholder="type a to-do item" class="note"><button type="button" class="add">Add To-Do</button></div>
+      <ul></ul>
+    </div>
+    <div class="row">
+      <div class="day">Wednesday</div>
+      <div class="input"><input type="text" placeholder="type event time" class="timestamp"><input type="text" placeholder="type a to-do item" class="note"><button type="button" class="add">Add To-Do</button></div>
+      <ul></ul>
+    </div>
+    <div class="row">
+      <div class="day">Thursday</div>
+      <div class="input"><input type="text" placeholder="type event time" class="timestamp"><input type="text" placeholder="type a to-do item" class="note"><button type="button" class="add">Add To-Do</button></div>
+      <ul></ul>
+    </div>
+    <div class="row">
+      <div class="day">Friday</div>
+      <div class="input"><input type="text" placeholder="type event time" class="timestamp"><input type="text" placeholder="type a to-do item" class="note"><button type="button" class="add">Add To-Do</button></div>
+      <ul></ul>
+    </div>
+    <div class="row">
+      <div class="day">Saturday</div>
+      <div class="input"><input type="text" placeholder="type event time" class="timestamp"><input type="text" placeholder="type a to-do item" class="note"><button type="button" class="add">Add To-Do</button></div>
+      <ul></ul>
+    </div>
+  </div>
+
+  <div id="helpBox"><h2>How to use:</h2><p> Hover over a weekday you want to add a to-do item to. A form appears where you can enter the time of the task and a brief description. Upon clicking add the task will appear on the to-do list for that day. You may drag the tasks to other days or to the delete box.</div>
+  <div id="deleteBox">Drag To-Do List Items Here To Delete!</div>
+
+  <!-- Load the CDN first -->
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- If CDN fails to load, serve up the local version -->
+  <script>
+    window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>');
+  </script>
+
+  <!-- jQuery UI -->
+  <script src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
